@@ -20,14 +20,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # django rest framework
     'rest_framework',
+
+    # my apps
     'book',
+    'books_owner',
 ]
 
 MIDDLEWARE = [
@@ -45,7 +51,7 @@ ROOT_URLCONF = 'bookshelf.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -57,6 +63,8 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_BOOKS_OWNER = 'books_owner.BooksOwner'
 
 WSGI_APPLICATION = 'bookshelf.wsgi.application'
 
