@@ -64,7 +64,7 @@ TEMPLATES = [
     },
 ]
 
-AUTH_BOOKS_OWNER = 'books_owner.BooksOwner'
+# AUTH_BOOKS_OWNER = 'books_owner.BooksOwner'
 
 WSGI_APPLICATION = 'bookshelf.wsgi.application'
 

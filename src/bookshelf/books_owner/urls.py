@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import BooksOwnersAPIView
+from .views import BooksOwners, BooksOwnerDetails
 
 urlpatterns = [
-    path('', BooksOwnersAPIView.as_view(), name='books owner list')
+    path('', BooksOwners.as_view(), name='books owner list'),
+    path('<int:pk>', BooksOwnerDetails.as_view(), name='books owner')
 ]
